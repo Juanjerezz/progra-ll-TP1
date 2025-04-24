@@ -1,5 +1,7 @@
 package org.uade.structure.implementation;
 
+import org.uade.structure.exception.EmptyStructureException;
+import org.uade.structure.exception.FullStructureException;
 import org.uade.structure.tpImplementation.Pacientes;
 
 public class PriorityQueueTP {
@@ -31,7 +33,7 @@ public class PriorityQueueTP {
      */
     public Pacientes getElement() {
         if (isEmpty()) {
-            throw new IllegalStateException("La estructura está vacía");
+            throw new EmptyStructureException("La estructura está vacía");
         }
         return head.paciente;
     }
@@ -41,7 +43,7 @@ public class PriorityQueueTP {
      */
     public int getPriority() {
         if (isEmpty()) {
-            throw new IllegalStateException("La estructura está vacía");
+            throw new EmptyStructureException("La estructura está vacía");
         }
         return head.paciente.getPrioridad();
     }
@@ -51,7 +53,7 @@ public class PriorityQueueTP {
      */
     public void add(Pacientes nuevoPaciente) {
         if (size >= CAPACIDAD_MAXIMA) {
-            throw new IllegalStateException("La estructura ha alcanzado su capacidad máxima");
+            throw new FullStructureException("La estructura ha alcanzado su capacidad máxima");
         }
 
         Nodo nuevoNodo = new Nodo(nuevoPaciente);
@@ -86,7 +88,7 @@ public class PriorityQueueTP {
      */
     public void remove() {
         if (isEmpty()) {
-            throw new IllegalStateException("La estructura está vacía");
+            throw new EmptyStructureException("La estructura está vacía");
         }
 
         head = head.siguiente;

@@ -1,4 +1,6 @@
 package org.uade.structure.implementation;
+import org.uade.structure.exception.EmptyStructureException;
+import org.uade.structure.exception.FullStructureException;
 import org.uade.structure.tpImplementation.Medicos;
 
 
@@ -30,14 +32,14 @@ public class QueueTP {
 
     public Medicos getElement() {
         if (isEmpty()) {
-            throw new IllegalStateException("La cola está vacía.");
+            throw new EmptyStructureException("La cola está vacía.");
         }
         return head.dato;
     }
 
     public void add(Medicos medico) {
         if (size >= capacidadMaxima) {
-            throw new IllegalStateException("La cola ha alcanzado su capacidad máxima.");
+            throw new FullStructureException("La cola ha alcanzado su capacidad máxima.");
         }
         Nodo nuevo = new Nodo(medico);
         if (isEmpty()) {
@@ -51,7 +53,7 @@ public class QueueTP {
 
     public void remove() {
         if (isEmpty()) {
-            throw new IllegalStateException("La cola está vacía.");
+            throw new EmptyStructureException("La cola está vacía.");
         }
         head = head.siguiente;
         if (head == null) {
