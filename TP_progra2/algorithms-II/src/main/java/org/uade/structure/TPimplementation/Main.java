@@ -9,6 +9,9 @@ import org.uade.structure.exception.InvalidOperationException;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
+import static org.uade.structure.Utilidades.ValidadorNombre.esNombreValido;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -57,6 +60,9 @@ public class Main {
 
                         System.out.println("Ingrese el nombre del paciente: ");
                         String nombrePaciente = scanner.nextLine();
+                        if (!esNombreValido(nombrePaciente)) {
+                            throw new InvalidOperationException("El nombre del paciente es inválido. No debe estar vacío ni contener números o símbolos.");
+                        }
                         System.out.println("Ingrese nivel de prioridad (1-Baja,2-Media,3-Alta): ");//se cambio el valor de prioridad
                         int prioridad = scanner.nextInt();
 
@@ -74,6 +80,9 @@ public class Main {
                         //Agregar un nuevo doctor a la cola
                         System.out.println("Ingrese el nombre del doctor");
                         String doctor = scanner.nextLine();
+                        if (!esNombreValido(doctor)) {
+                            throw new InvalidOperationException("El nombre del doctor es inválido. No debe estar vacío ni contener números o símbolos.");
+                        }
                         colaMedicos.add(new Medicos(doctor));
 
                         System.out.println("\nDoctor ingresado correctamente.\n-----------------------");
