@@ -1,6 +1,6 @@
 package org.uade.structure.implementation;
 
-import org.uade.structure.TPimplementation.Pacientes;
+import org.uade.structure.tpImplementation.Pacientes;
 
 public class PriorityQueueTP {
 

@@ -1,7 +1,7 @@
 package org.uade.structure.Utilidades;
 
-import org.uade.structure.TPimplementation.Medicos;
-import org.uade.structure.TPimplementation.Pacientes;
+import org.uade.structure.tpImplementation.Medicos;
+import org.uade.structure.tpImplementation.Pacientes;
 import org.uade.structure.implementation.PriorityQueueTP;
 import org.uade.structure.implementation.QueueTP;
 

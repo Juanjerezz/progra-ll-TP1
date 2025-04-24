@@ -1,4 +1,4 @@
-package org.uade.structure.TPimplementation;
+package org.uade.structure.tpImplementation;
 import org.uade.structure.Utilidades.Cargas;
 import org.uade.structure.Utilidades.UtilidadesQueue;
 import org.uade.structure.implementation.PriorityQueueTP;

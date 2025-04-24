@@ -64,4 +64,4 @@ El sistema utiliza excepciones personalizadas para gestionar casos de error como
    javac -d bin src/org/uade/structure/TPimplementation/Main.java
 3. Ejecutar el proyecto:
    ```bash
-   java -cp bin org.uade.structure.TPimplementation.Main
+   java -cp bin org.uade.structure.tpImplementation.Main

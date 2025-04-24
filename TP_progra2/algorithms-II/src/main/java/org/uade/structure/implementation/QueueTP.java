@@ -1,5 +1,5 @@
 package org.uade.structure.implementation;
-import org.uade.structure.TPimplementation.Medicos;
+import org.uade.structure.tpImplementation.Medicos;
 
 
 public class QueueTP {
