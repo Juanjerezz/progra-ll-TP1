@@ -16,8 +16,9 @@ El proyecto está organizado de la siguiente manera:
 
 - **`org.uade.structure`**: Contiene las estructuras de datos y clases relacionadas con la gestión de pacientes y médicos.
 - **`org.uade.structure.implementation`**: Implementaciones de colas (`QueueTP` y `PriorityQueueTP`) utilizadas para gestionar las estructuras de datos.
+- **`org.uade.structure.tpImplementation`**: Contiene la clase Main, punto de entrada del programa, junto con clases que manejan la lógica de médicos y pacientes.
 - **`org.uade.structure.exception`**: Excepciones personalizadas utilizadas para manejar errores comunes como estructuras vacías.
-- **`org.uade.structure.Utilidades`**: Contiene clases auxiliares como `Cargas` (para precargar médicos y pacientes) y `ValidadorNombre` (para validar los nombres de pacientes y médicos).
+- **`org.uade.structure.utilidades`**: Contiene clases auxiliares como `Cargas` (para precargar médicos y pacientes) y `ValidadorNombre` (para validar los nombres de pacientes y médicos).
 
 ## Funcionalidad
 
