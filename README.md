@@ -14,7 +14,7 @@ Este proyecto es un sistema de gestión para un centro de emergencias médicas, 
 
 El proyecto está organizado de la siguiente manera:
 
-- **`org.uade.structure`**: Contiene las estructuras de datos y clases relacionadas con la gestión de pacientes y médicos.
+- **`org.uade.structure.definition`**: Contiene las interfaces abstractas (`QueueTP` y `PriorityQueueTP`), que definen los contratos para las colas y colas con prioridad utilizadas en el sistema. Estas interfaces permiten separar la definición de las estructuras de datos de su implementación.
 - **`org.uade.structure.implementation`**: Implementaciones de colas (`QueueTP` y `PriorityQueueTP`) utilizadas para gestionar las estructuras de datos.
 - **`org.uade.structure.tpImplementation`**: Contiene la clase Main, punto de entrada del programa, junto con clases que manejan la lógica de médicos y pacientes.
 - **`org.uade.structure.exception`**: Excepciones personalizadas utilizadas para manejar errores comunes como estructuras vacías.
