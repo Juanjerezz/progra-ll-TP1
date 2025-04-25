@@ -96,9 +96,9 @@ public class Main {
                             throw new EmptyStructureException("No hay pacientes en espera.");
                         }
 
-                        Medicos medicoSeleccionado = colaMedicos.getElement();
+                        Medicos medicoSeleccionado = colaMedicos.getElement(1);
                         colaMedicos.remove();
-                        Pacientes pacienteSeleccionado = colaPacientes.getElement();
+                        Pacientes pacienteSeleccionado = colaPacientes.getElement(1);
                         colaPacientes.remove();
 
                         medicosOcupados.add(medicoSeleccionado);
@@ -113,7 +113,7 @@ public class Main {
                             throw new EmptyStructureException("No hay médicos atendiendo pacientes.");
                         }
 
-                        Medicos medicoLibre = medicosOcupados.getElement();
+                        Medicos medicoLibre = medicosOcupados.getElement(1);
                         medicosOcupados.remove();
                         System.out.println("Doctor " + medicoLibre + " terminó de atender a su paciente.");
                         colaMedicos.add(medicoLibre);

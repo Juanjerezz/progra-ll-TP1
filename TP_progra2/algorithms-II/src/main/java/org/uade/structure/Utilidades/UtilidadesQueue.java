@@ -11,13 +11,13 @@ public class UtilidadesQueue {
         QueueTP aux = getNewQueue(queue);
         QueueTP copy = getNewQueue(queue);
         while (!queue.isEmpty()) {
-            aux.add(queue.getElement());
+            aux.add(queue.getElement(1));
             queue.remove();
         }
 
         while (!aux.isEmpty()) {
-            copy.add(aux.getElement());
-            queue.add(aux.getElement());
+            copy.add(aux.getElement(1));
+            queue.add(aux.getElement(1));
             aux.remove();
         }
 
@@ -27,17 +27,9 @@ public class UtilidadesQueue {
     public static void print(QueueTP queue) {
         QueueTP copy = copy(queue);
         while (!copy.isEmpty()) {
-            System.out.println(copy.getElement());
+            System.out.println(copy.getElement(1));
             copy.remove();
         }
     }
-
-
-
-
-
-
-
-
 
 }

@@ -17,6 +17,7 @@ public interface PriorityQueueADT {
      * Descripcion: Agrega un elemento al final de la estructura. Precondición: La estructura no debe sobrepasar la
      * capacidad.
      */
+
     void add(int value, int priority);
 
     /**

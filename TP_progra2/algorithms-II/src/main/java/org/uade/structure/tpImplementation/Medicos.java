@@ -7,7 +7,7 @@ public class Medicos{
 
     //constructor
     public Medicos(String nombre) {
-       this.nombre = nombre;
+        this.nombre = nombre;
     }
 
     @Override
@@ -19,7 +19,6 @@ public class Medicos{
         return nombre;
     }
 }
-
 
 
 
