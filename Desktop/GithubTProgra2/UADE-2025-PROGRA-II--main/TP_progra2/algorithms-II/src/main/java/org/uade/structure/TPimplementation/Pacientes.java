@@ -1,4 +1,4 @@
-package org.uade.structure.TPimplementation;
+package org.uade.structure.tpImplementation;
 
 public class Pacientes {
     //Atributos

@@ -1,8 +1,11 @@
 package org.uade.structure.implementation;
-import org.uade.structure.TPimplementation.Medicos;
+import org.uade.structure.definition.QueueADT;
+import org.uade.structure.exception.EmptyStructureException;
+import org.uade.structure.exception.FullStructureException;
+import org.uade.structure.tpImplementation.Medicos;
 
 
-public class QueueTP {
+public class QueueTP  implements QueueADT {
 
     private static final int capacidadMaxima = 15; // Puedes ajustar el límite según sea necesario
 
@@ -28,16 +31,24 @@ public class QueueTP {
 
     // Métodos
 
-    public Medicos getElement() {
+    public int getElement(){
+        return 0;
+    }
+
+    public Medicos getElement(int index) {
         if (isEmpty()) {
-            throw new IllegalStateException("La cola está vacía.");
+            throw new EmptyStructureException("La cola está vacía.");
         }
         return head.dato;
     }
 
+    public void add(int value){
+
+    }
+
     public void add(Medicos medico) {
         if (size >= capacidadMaxima) {
-            throw new IllegalStateException("La cola ha alcanzado su capacidad máxima.");
+            throw new FullStructureException("La cola ha alcanzado su capacidad máxima.");
         }
         Nodo nuevo = new Nodo(medico);
         if (isEmpty()) {
@@ -51,7 +62,7 @@ public class QueueTP {
 
     public void remove() {
         if (isEmpty()) {
-            throw new IllegalStateException("La cola está vacía.");
+            throw new EmptyStructureException("La cola está vacía.");
         }
         head = head.siguiente;
         if (head == null) {
